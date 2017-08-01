@@ -1,0 +1,8 @@
+.gradle
+/local.properties
+/.idea
+/build
+/ofc_project/libraries/library/build
+.DS_Store
+*.iml
+**/Thumbs.db
