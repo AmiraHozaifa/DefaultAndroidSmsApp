@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "defandsmsapp.com.defandsmsapp"
+        applicationId "com.defandsmsapp"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
