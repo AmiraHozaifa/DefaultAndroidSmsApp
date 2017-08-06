@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.send_sms)
     public void onSendSms(View view) {
-        startActivity(new Intent(MainActivity.this, SendMsgActivity.class));
+        startActivity(new Intent(MainActivity.this, ComposeSmsActivity.class));
     }
 
 

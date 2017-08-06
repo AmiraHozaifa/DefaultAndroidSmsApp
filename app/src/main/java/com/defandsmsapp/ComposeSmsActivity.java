@@ -23,7 +23,7 @@ import butterknife.OnClick;
 /**
  * Created by xvbp3947 on 01/08/17.
  */
-public class SendMsgActivity extends AppCompatActivity {
+public class ComposeSmsActivity extends AppCompatActivity {
 
 
     @BindView(R.id.phone_number_edit_text)
