@@ -12,6 +12,7 @@ import android.telephony.SmsMessage;
 public class MessagesContentProviderHandler {
 
     public static void addReceivedMessageToContentProvider(Context context, SmsMessage smsMessage) {
+
         ContentValues values = new ContentValues();
         values.put(Telephony.Sms.ADDRESS, smsMessage.getDisplayOriginatingAddress());
         values.put(Telephony.Sms.BODY, smsMessage.getMessageBody());
