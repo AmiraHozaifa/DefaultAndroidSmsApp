@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.defandsmsapp.utils.NotificationUtil;
 
@@ -30,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.send_sms)
     public void onSendSms(View view) {
-//        NotificationUtil.showNotification(this , "oo");
-        startActivity(new Intent(MainActivity.this, SendMsgActivity.class));
+
+        startActivity(new Intent(MainActivity.this, ComposeSmsActivity.class));
     }
 
 

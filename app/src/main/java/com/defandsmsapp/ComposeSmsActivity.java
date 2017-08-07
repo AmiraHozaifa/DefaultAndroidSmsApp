@@ -9,10 +9,13 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
+import android.telephony.SmsMessage;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.defandsmsapp.contentprovider.MessagesContentProviderHandler;
 
 import java.util.List;
 
@@ -23,7 +26,7 @@ import butterknife.OnClick;
 /**
  * Created by xvbp3947 on 01/08/17.
  */
-public class SendMsgActivity extends AppCompatActivity {
+public class ComposeSmsActivity extends AppCompatActivity {
 
 
     @BindView(R.id.phone_number_edit_text)
@@ -120,6 +123,8 @@ public class SendMsgActivity extends AppCompatActivity {
                 PendingIntent sentIntent = PendingIntent.getBroadcast(this, 0, new Intent("SMS_SENT"), 0);
                 PendingIntent deliveredIntent = PendingIntent.getBroadcast(this, 0, new Intent("SMS_DELIVERED"), 0);
                 sms.sendTextMessage(phone, null, msg, sentIntent, deliveredIntent);
+                MessagesContentProviderHandler.addSentMessageToContentProvider(this, msg , phone);
+
 
             }
         }

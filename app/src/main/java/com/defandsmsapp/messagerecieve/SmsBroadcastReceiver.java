@@ -28,7 +28,7 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
                 String format = intentExtras.getString("format");
                 SmsMessage smsMessage = SmsMessage.createFromPdu((byte[]) sms[i], format);
                 if (DefaultSmsAppUtil.isDefaultSmsApp(context)) {
-                    MessagesContentProviderHandler.addReceivedMessageToContentProvider(context, smsMessage);
+                    MessagesContentProviderHandler.addReceivedMessageToContentProvider(context, smsMessage.getMessageBody(),smsMessage.getDisplayOriginatingAddress());
 //                    Toast.makeText(context , "Message received : " + smsMessage.getMessageBody() , Toast.LENGTH_LONG).show();
                     NotificationUtil.showNotification(context , smsMessage.getMessageBody());
 
